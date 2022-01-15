@@ -26,7 +26,7 @@ end
 
 # one line for fun
 def fibs_rec2(num, array = [0, 1, 1])
-  num <= 2 ? array : array << fibs_rec(num - 1, array)[-1] + fibs_rec(num - 1)[-2]
+  num <= 2 ? array : array << fibs_rec2(num - 1, array)[-1] + fibs_rec2(num - 1)[-2]
 end
 
 p fibs_rec(5)
